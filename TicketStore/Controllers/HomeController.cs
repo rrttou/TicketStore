@@ -59,11 +59,11 @@ namespace TicketStore.Controllers
         [HttpPost]
         public async Task<IActionResult> Twitter(String tweet)
         {
-            string APIkey = "gMGbGJawdwSUT2ol3jXKDLd1t";
-            string APIsecret = "kRA2ymHpDmZytgISrLgyzZqp7T8Ril9y1lz8BK4cBVm1OlEE67";
-            string APIToken = "1459045772188606486-fgPBvYbvxSjKi92gUBUgJkEkJTIaMa";
-            string APITokenSecret = "JAtexAJatHUkBa4CBuNzadiP9oE9OSevRwFZnhYBcd3UM";
-            string APIBearerToken = "AAAAAAAAAAAAAAAAAAAAAKz9VgEAAAAAkR%2Bb%2FAczCSBT4qtI9we0zEYQqrc%3DyXaxLxF5upOVK7BOG2mDCYE0YHWvf93teaociiiJQHHNe9x1To";
+            string APIkey = "YWfc6WQSoP77w21A8RXn11MKi";
+            string APIsecret = "7KZp8bHnrQsQnYf1WRWdSj5Z0Q3uFIypikUOUYfUyu8dcnuBgP";
+            string APIToken = "1459439825635975171-KWhMok4VubP8bi1RFbpmLpnrlhd73z";
+            string APITokenSecret = "1lU5pAOPLxV0ULIS8cTKxW0hHueKNFbqqed7OQtu054y1";
+            string APIBearerToken = "AAAAAAAAAAAAAAAAAAAAAA0iVwEAAAAAFA35awVanGeXFekdD77H87WStVQ%3Dea6SluyLrA2FoHdCAkOUK3htJS8ukwjPjsUQIlofvV8opgqVpj";
             var client = new TwitterClient(APIkey, APIsecret, APIToken, APITokenSecret);
             //client.Config.TweetMode = TweetMode.Compat;
             await client.Tweets.PublishTweetAsync(tweet);

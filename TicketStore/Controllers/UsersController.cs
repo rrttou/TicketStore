@@ -87,6 +87,7 @@ namespace TicketStore.Controllers
         //[Authorize(Roles = "Admin")]
         public async Task<IActionResult> Edit(int id, [Bind("Id,UserName,FirstName,LastName,Password,PasswordConfirm,Email,Birthdate,Gender,Type,IsAdmin")] User user)
         {
+
             if (!(User.Claims.Any() && User.Claims.First(c => c.Type == "Role").Value.Equals("Admin")))
             {
                 return View("NotFound");
